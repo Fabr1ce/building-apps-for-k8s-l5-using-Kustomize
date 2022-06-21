@@ -19,7 +19,8 @@ The following steps will deploy a k8s deploymentand a service:
 2 - Write YAML files to pass to k8s or use the ones in this repo and use the following cmds:
 - Create the deployment and verify:
 
-	'''kubectl apply -f deployment.yaml''' 
+
+	kubectl apply -f deployment.yaml
 	
 
         kubectl get pods
@@ -39,6 +40,7 @@ The following steps will deploy a k8s deploymentand a service:
 - pods can be accessed through cURL like this exec <outside-pod-name> curl <pod-ip>:<port-in-manifest>. Notice the difference between Port (port service listens on and forwards to NodePort) and NodePort (port pod listens on)
 - clean up:
 
+	
 	kubectl delete -f service.yaml
 	
 
@@ -47,6 +49,7 @@ The following steps will deploy a k8s deploymentand a service:
 **Using Kustomize:**
 Kustomize takes all the yaml files and creates all the components/objects/environments using the following cmds:
 
+	
 	kustomize build base
 
 	
