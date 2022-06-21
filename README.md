@@ -26,11 +26,10 @@ The following steps will deploy a k8s deploymentand a service:
 	
 
 - Create the service:
-	
 
-	kubectl apply -f service.yaml 
-	
-	
+	kubectl apply -f service.yaml
+
+
 	kubectl get services 
 	
 
@@ -44,7 +43,7 @@ The following steps will deploy a k8s deploymentand a service:
 
 	kubectl delete -f deployment.yaml
 
-**Using Kustomize**
+**Using Kustomize:**
 Kustomize takes all the yaml files and creates all the components/objects/environments using the following cmds:
 
 	kustomize build base
