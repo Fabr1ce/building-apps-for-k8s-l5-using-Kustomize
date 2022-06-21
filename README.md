@@ -17,35 +17,44 @@ The following steps will deploy a k8s deploymentand a service:
 1 - Create a cluster: refer to https://github.com/Fabr1ce/building-apps-for-k8s-l4 for steps on how to create a kubernetes cluster.
 
 2 - Write YAML files to pass to k8s or use the ones in this repo and use the following cmds:
-	- Create the deployment and verify:
+- Create the deployment and verify:
 
-	kubectl apply -f deployment.yaml  
+	kubectl apply -f deployment.yaml 
+	
 
         kubectl get pods
+	
 
-	- Create the service:
+- Create the service:
+	
 
 	kubectl apply -f service.yaml 
 	
+	
 	kubectl get services 
+	
 
-From here:
+**From here:**
 - service IP can be accessed through cURL like this exec <outside-pod-name> curl <cluster-ip>
 - pods can be accessed through cURL like this exec <outside-pod-name> curl <pod-ip>:<port-in-manifest>. Notice the difference between Port (port service listens on and forwards to NodePort) and NodePort (port pod listens on)
 - clean up:
 
 	kubectl delete -f service.yaml
+	
 
 	kubectl delete -f deployment.yaml
 
-Using Kustomize
+**Using Kustomize**
 Kustomize takes all the yaml files and creates all the components/objects/environments using the following cmds:
 
 	kustomize build base
 
+	
 	kustomize build overlays/production
+	
 
 	kustomize build overlays/production | kubectl apply -f -
+	
 	
 Kustomize here took the base resource manifest and patched them with overlays.
 	
