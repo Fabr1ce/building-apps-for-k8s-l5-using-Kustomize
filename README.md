@@ -19,7 +19,7 @@ The following steps will deploy a k8s deploymentand a service:
 2 - Write YAML files to pass to k8s or use the ones in this repo and use the following cmds:
 - Create the deployment and verify:
 
-	kubectl apply -f deployment.yaml 
+	'''kubectl apply -f deployment.yaml''' 
 	
 
         kubectl get pods
