@@ -20,8 +20,10 @@ The following steps will deploy a k8s deploymentand a service:
 - Create the deployment and verify:
 
 
+
 	kubectl apply -f deployment.yaml
 	
+
 
         kubectl get pods
 	
