@@ -12,7 +12,7 @@ This repo is used to practice k8s deployment and service manifests. Concepts cov
 
 5 - kustomize manages apps without the need of templates.
 
-The following steps will deploy a k8s deploymentand a service:
+The following steps will deploy a k8s deployment and a service:
 
 1 - Create a cluster: refer to https://github.com/Fabr1ce/building-apps-for-k8s-l4 for steps on how to create a kubernetes cluster.
 
