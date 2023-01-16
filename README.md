@@ -20,11 +20,13 @@ This repo is used to practice k8s deployment and service manifests. Concepts cov
 
 ### Create the deployment and verify:
 `kubectl apply -f deployment.yaml`
+
 `kubectl get pods`
 	
 
 ## Create the service:
 `kubectl apply -f service.yaml`
+
 `kubectl get services` 
 	
 
@@ -32,25 +34,16 @@ This repo is used to practice k8s deployment and service manifests. Concepts cov
 - service IP can be accessed through cURL like this exec <outside-pod-name> curl <cluster-ip>
 - pods can be accessed through cURL like this exec <outside-pod-name> curl <pod-ip>:<port-in-manifest>. Notice the difference between Port (port service listens on and forwards to NodePort) and NodePort (port pod listens on)
 - clean up:
-
+`kubectl delete -f service.yaml`
 	
-	kubectl delete -f service.yaml
-	
-
-	kubectl delete -f deployment.yaml
+`kubectl delete -f deployment.yaml`
 
 **Using Kustomize:**
 Kustomize takes all the yaml files and creates all the components/objects/environments using the following cmds:
+`kustomize build base`
 
-	
-	kustomize build base
+`kustomize build overlays/production`
 
-	
-	kustomize build overlays/production
-	
-
-	kustomize build overlays/production | kubectl apply -f -
-	
+`kustomize build overlays/production | kubectl apply -f -`
 	
 Kustomize here took the base resource manifest and patched them with overlays.
-	
