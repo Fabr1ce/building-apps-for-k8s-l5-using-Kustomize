@@ -19,20 +19,13 @@ This repo is used to practice k8s deployment and service manifests. Concepts cov
 2. Write YAML files to pass to k8s or use the ones in this repo and use the following cmds:
 
 ### Create the deployment and verify:
-
-
-kubectl apply -f deployment.yaml
-       
-kubectl get pods
+`kubectl apply -f deployment.yaml`
+`kubectl get pods`
 	
 
 ## Create the service:
-
-
-	kubectl apply -f service.yaml
-	
-	
-	kubectl get services 
+`kubectl apply -f service.yaml`
+`kubectl get services` 
 	
 
 **From here:**
