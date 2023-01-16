@@ -2,22 +2,23 @@
 
 This repo is used to practice k8s deployment and service manifests. Concepts covered here are also explained in the [k8s docs](https://kubernetes.io/docs/concepts/workloads/):
 
-1 - pods (groud of one or more containers with single IP)
+1. pods (groud of one or more containers with single IP)
 
-2 -  replicaSet (way to deploy multiple identical pods at once)
+2. replicaSet (way to deploy multiple identical pods at once)
 
-3 -  deployment (manages replicasets plus rolling updates)
+3. deployment (manages replicasets plus rolling updates)
 
-4 -  service (provides a stable network address for apps including local IP that allows pods to be destroy while the remaining pods have this IP where traffic is directed, DNS within the cluster, it load balances traffic accross pods)
+4. service (provides a stable network address for apps including local IP that allows pods to be destroy while the remaining pods have this IP where traffic is directed, DNS within the cluster, it load balances traffic accross pods)
 
-5 - kustomize manages apps without the need of templates.
+5. kustomize manages apps without the need of templates.
 
-The following steps will deploy a k8s deployment and a service:
+## The following steps will deploy a k8s deployment and a service:
 
-1 - Create a cluster: refer to https://github.com/Fabr1ce/building-apps-for-k8s-l4 for steps on how to create a kubernetes cluster.
+1. Create a cluster: refer to https://github.com/Fabr1ce/building-apps-for-k8s-l4 for steps on how to create a kubernetes cluster.
 
-2 - Write YAML files to pass to k8s or use the ones in this repo and use the following cmds:
-- Create the deployment and verify:
+2. Write YAML files to pass to k8s or use the ones in this repo and use the following cmds:
+
+### Create the deployment and verify:
 
 
 kubectl apply -f deployment.yaml
@@ -25,7 +26,7 @@ kubectl apply -f deployment.yaml
 kubectl get pods
 	
 
-- Create the service:
+## Create the service:
 
 
 	kubectl apply -f service.yaml
