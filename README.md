@@ -34,7 +34,7 @@ This repo is used to practice k8s deployment and service manifests. Concepts cov
 
 **From here:**
 - service IP can be accessed through cURL like this `exec <outside-pod-name> curl <cluster-ip>`
-- pods can be accessed through cURL like this exec <outside-pod-name> curl <pod-ip>:<port-in-manifest>. Notice the difference between Port (port service listens on and forwards to NodePort) and NodePort (port pod listens on)
+- pods can be accessed through cURL like this `exec <outside-pod-name> curl <pod-ip>:<port-in-manifest>`. Notice the difference between Port (port service listens on and forwards to NodePort) and NodePort (port pods listens on).
 - clean up:
 	
 `kubectl delete -f service.yaml`
