@@ -8,7 +8,7 @@ This repo is used to practice k8s deployment and service manifests. Concepts cov
 
 3. deployment (manages replicasets plus rolling updates)
 
-4. service (provides a stable network address for apps including local IP that allows pods to be destroy while the remaining pods have this IP where traffic is directed, DNS within the cluster, it load balances traffic accross pods)
+4. service (provides a stable network address for apps including local IP that allows pods to be destroyed while the remaining pods have this IP where traffic is directed, DNS within the cluster, it load balances traffic accross pods)
 
 5. kustomize manages apps without the need of templates.
 
