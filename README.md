@@ -1,6 +1,6 @@
 # building-apps-for-k8s-l5
 
-This repo is used to practice k8s deployment and service manifests. Concepts covered here are also explained in the [k8s docs](https://kubernetes.io/docs/concepts/workloads/):
+This repo is used to practice k8s deployment and service manifests using Kustomize. Concepts covered here are also explained in the [k8s docs](https://kubernetes.io/docs/concepts/workloads/):
 
 1. pods (groud of one or more containers with single IP)
 
